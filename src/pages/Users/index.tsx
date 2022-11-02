@@ -6,7 +6,7 @@ import { Pagination } from "../../components/Pagination";
 import { Sidebar } from "../../components/Sidebar";
 
 
-export default function Users() {
+export default function UsersList() {
  return (
   <Box>
    <Header />
