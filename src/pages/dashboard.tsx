@@ -4,7 +4,7 @@ import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { ApexOptions } from 'apexcharts';
 
-const Chart = dynamic(() => import ('react-apexcharts'), {
+const Chart = dynamic(() => import('react-apexcharts'), {
  ssr: false,
 })
 
@@ -32,7 +32,7 @@ const options: ApexOptions = {
   axisBorder: {
    color: theme.colors.gray[600],
   },
-  axisTicks:{
+  axisTicks: {
    color: theme.colors.gray[600],
   },
   categories: [
@@ -47,7 +47,7 @@ const options: ApexOptions = {
  },
  fill: {
   opacity: 0.3,
-  type:'gradient',
+  type: 'gradient',
   gradient: {
    shade: 'dark',
    opacityFrom: 0.7,
@@ -70,7 +70,7 @@ export default function dashboard() {
 
     <SimpleGrid flex='1' gap='4' minChildWidth='320px' alignItems='flex-start'>
      <Box
-      p='8'
+      p={['6', '8']}
       bg='gray.800'
       borderRadius={8}
       pb='4'
@@ -79,7 +79,7 @@ export default function dashboard() {
       <Chart options={options} series={series} type='area' height={160} />
      </Box>
      <Box
-      p='8'
+      p={['6', '8']}
       bg='gray.800'
       borderRadius={8}
       pb='4'
